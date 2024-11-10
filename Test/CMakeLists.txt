@@ -4,9 +4,9 @@ enable_language(CUDA)
 find_package(CUDAToolkit)
 include_directories(${CUDA_INCLUDE_DIRS})
 
-add_executable(CudaTest VectorAdd.cu)
+add_executable(VectorAddTest hello.cu)
 
-add_executable(Hello hello.cpp)
+target_link_libraries(VectorAddTest PUBLIC LinearAlgebra)
 
 
 
